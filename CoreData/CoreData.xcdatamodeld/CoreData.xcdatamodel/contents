@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="School" representedClassName="School" syncable="YES" codeGenerationType="class">
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="school_stu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="stu_school" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stu_school" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="School" inverseName="school_stu" inverseEntity="School" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="School" positionX="-45" positionY="0" width="128" height="90"/>
+        <element name="Student" positionX="-18" positionY="27" width="128" height="90"/>
+    </elements>
+</model>
